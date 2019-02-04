@@ -55,7 +55,8 @@ const DirectorType= new GraphQLObjectType({
             resolve(parent, args){
                 return _.filter(movies, {directorId:parent.id})
             }
-        }
+        } 
+        
     })
 
 }); 
@@ -85,7 +86,14 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return movies
             }
+        },
+        directors: {
+            type: new GraphQLList(DirectorType),
+            resolve(parent, args) {
+                return directors;
+            }
         }
+
     }
 });
 
