@@ -5,7 +5,7 @@ const movieSchema = new Schema({
 
     name: String,
     genre: String,
-    authorId: String
+    directorId: String
 });
 
-module.exports= mongoose.model('Book', movieSchema)
+module.exports= mongoose.model('Movie', movieSchema)
