@@ -108,7 +108,15 @@ const Mutation = new GraphQLObjectType({
             args:{
                 name: {type: GraphQLString},
                 genre: {type: GraphQLString},
-                directorId: {type: GraphQLId},
+                directorId: {type: GraphQLID},
+            },
+            resolve(parent, args){
+                let movie = new Movie({
+                    name: args.name,
+                    genre: args.genre,
+                    directorId:args.directorId
+                });
+                return movie.save();
             }
         }
     }
