@@ -5,7 +5,7 @@ const schema = require('./schema/schema');
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://user:userpassword26@ds121415.mlab.com:21415/codeit');
+mongoose.connect('mongodb://127.0.0.1:27017/graphql');
 mongoose.connection.once('open', ()=> {
     console.log('connected');
 })

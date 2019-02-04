@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongooseSchema;
+const Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
 
